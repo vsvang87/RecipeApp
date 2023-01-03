@@ -70,6 +70,7 @@ body {
       }
     }
     .search-result-container {
+      min-height: 100vh;
       display: grid;
       grid-template-columns: repeat(4, minmax(auto, 1fr));
       /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
@@ -124,6 +125,19 @@ body {
           }
         }
       }
+    }
+  }
+}
+footer {
+  min-height: 20vh;
+  background: $colorBlack;
+  color: $colorWhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .footer-content {
+    .title {
+      font-size: 1.5rem;
     }
   }
 }

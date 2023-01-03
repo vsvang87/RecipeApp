@@ -70,6 +70,7 @@ body {
   color: #1dad9b;
 }
 .container .recipe-content .search-result-container {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, minmax(auto, 1fr));
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
@@ -130,4 +131,16 @@ body {
 .container .recipe-content .search-result-container .result-recipe .result-description a .btn:hover {
   background: #606470;
   color: #1dad9b;
+}
+
+footer {
+  min-height: 20vh;
+  background: #323643;
+  color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-content .title {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
