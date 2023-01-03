@@ -36,16 +36,28 @@ body {
     flex-direction: column;
     .search-content {
       margin-bottom: 2rem;
-      h1 {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: $colorBluishGreen;
+      .title-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        img {
+          width: 10%;
+        }
+        h1 {
+          color: $colorBluishGreen;
+        }
       }
+
       form {
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
         margin-inline: auto;
+        text-align: center;
         input {
-          position: relative;
           display: inline-block;
           outline: none;
           padding: 0.5rem 0.5rem;
@@ -57,8 +69,6 @@ body {
           font-size: 1.5rem;
         }
         .search-btn {
-          position: absolute;
-          top: 6.35rem;
           background: $colorWhite;
           padding: 0.5rem;
           border: none;
@@ -136,8 +146,15 @@ footer {
   justify-content: center;
   align-items: center;
   .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     .title {
       font-size: 1.5rem;
+    }
+    img {
+      width: 10%;
     }
   }
 }
