@@ -1,0 +1,10 @@
+@mixin mediaQuery1550() {
+  @media (max-width: 1550px) {
+    @content;
+  }
+}
+@mixin mediaQuery750() {
+  @media (max-width: 750px) {
+    @content;
+  }
+}

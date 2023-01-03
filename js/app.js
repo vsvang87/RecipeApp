@@ -2,7 +2,9 @@ const form = document.getElementById("form");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-button");
 const searchResult = document.getElementById("search-result");
+//api ID
 const appID = "d416adf6";
+//api Keys
 const appKeys = "2749c7e74f1c0c4a2d8bf4b8558449e9";
 
 //form
@@ -18,7 +20,6 @@ async function fetchAPI() {
   const data = await response.json();
   //calling function and passing data into function
   renderHtml(data.hits);
-  console.log(data);
 }
 
 function renderHtml(results) {
@@ -31,9 +32,15 @@ function renderHtml(results) {
             <img src="${result.recipe.image}" alt="" />
             <div class="result-description">
               <p class="title">${result.recipe.label}</p>
+              <p class="calories">Diet Label: ${
+                result.recipe.dietLabels.length > 0
+                  ? result.recipe.dietLabels.length
+                  : "Not Found"
+              }</p>
               <p class="calories">Calories: ${result.recipe.calories.toFixed(
                 2
               )}</p>
+              
                 <a href="${
                   result.recipe.url
                 }" target="_black"><button class="btn">Recipe</button></a>

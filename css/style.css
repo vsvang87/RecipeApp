@@ -23,16 +23,28 @@ body {
   margin-inline: auto;
   padding: 2rem 0;
 }
+@media (max-width: 750px) {
+  .container {
+    width: min(100%, 90rem);
+  }
+}
+.container .recipe-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .container .recipe-content .search-content {
-  text-align: center;
   margin-bottom: 2rem;
 }
 .container .recipe-content .search-content h1 {
+  text-align: center;
   margin-bottom: 2rem;
   color: #1dad9b;
 }
 .container .recipe-content .search-content form {
   width: 100%;
+  margin-inline: auto;
 }
 .container .recipe-content .search-content form input {
   position: relative;
@@ -55,6 +67,7 @@ body {
   border-radius: 0 5px 5px 0;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #1dad9b;
 }
 .container .recipe-content .search-result-container {
   display: grid;
@@ -62,18 +75,28 @@ body {
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
   gap: 1.5rem;
 }
+@media (max-width: 1550px) {
+  .container .recipe-content .search-result-container {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+}
+@media (max-width: 750px) {
+  .container .recipe-content .search-result-container {
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+  }
+}
 .container .recipe-content .search-result-container .result-recipe {
   border: 1px solid #323643;
+  border-radius: 5px;
   background: #323643;
 }
 .container .recipe-content .search-result-container .result-recipe img {
   width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 .container .recipe-content .search-result-container .result-recipe .result-description {
-  /* position: relative;*/
   letter-spacing: 0.05rem;
   padding: 1rem;
-  text-align: center;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -84,16 +107,13 @@ body {
 }
 .container .recipe-content .search-result-container .result-recipe .result-description .calories {
   color: #f7f7f7;
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
 }
 .container .recipe-content .search-result-container .result-recipe .result-description a {
   text-decoration: none;
 }
 .container .recipe-content .search-result-container .result-recipe .result-description a .btn {
-  /* position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  */
   width: 100%;
   margin-top: 1rem;
   background: #1dad9b;
@@ -105,4 +125,9 @@ body {
   cursor: pointer;
   color: #f7f7f7;
   letter-spacing: 0.08rem;
+  transition: 0.2s ease;
+}
+.container .recipe-content .search-result-container .result-recipe .result-description a .btn:hover {
+  background: #606470;
+  color: #1dad9b;
 }/*# sourceMappingURL=style.css.map */

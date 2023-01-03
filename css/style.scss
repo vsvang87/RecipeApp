@@ -1,3 +1,5 @@
+@import "mixins";
+
 $colorBlack: #323643;
 $colorDarkGray: #606470;
 $colorBluishGreen: #1dad9b;
@@ -24,17 +26,24 @@ body {
   width: min(90%, 90rem);
   margin-inline: auto;
   padding: 2rem 0;
+  @include mediaQuery750() {
+    width: min(100%, 90rem);
+  }
   .recipe-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .search-content {
-      text-align: center;
       margin-bottom: 2rem;
       h1 {
+        text-align: center;
         margin-bottom: 2rem;
         color: $colorBluishGreen;
       }
       form {
         width: 100%;
-
+        margin-inline: auto;
         input {
           position: relative;
           display: inline-block;
@@ -56,6 +65,7 @@ body {
           border-radius: 0 5px 5px 0;
           font-size: 1.5rem;
           cursor: pointer;
+          color: $colorBluishGreen;
         }
       }
     }
@@ -64,17 +74,23 @@ body {
       grid-template-columns: repeat(4, minmax(auto, 1fr));
       /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
       gap: 1.5rem;
+      @include mediaQuery1550() {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+      }
+      @include mediaQuery750() {
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+      }
       .result-recipe {
         border: 1px solid $colorBlack;
+        border-radius: 5px;
         background: $colorBlack;
         img {
           width: 100%;
+          border-radius: 5px 5px 0 0;
         }
         .result-description {
-          /* position: relative;*/
           letter-spacing: 0.05rem;
           padding: 1rem;
-          text-align: center;
           min-height: fit-content;
           .title {
             padding-bottom: 0.5rem;
@@ -82,15 +98,12 @@ body {
           }
           .calories {
             color: $colorWhite;
+            padding: 0.3rem 0;
+            font-size: 0.8rem;
           }
           a {
             text-decoration: none;
             .btn {
-              /* position: absolute;
-              left: 1rem;
-              right: 1rem;
-              bottom: 1rem;
-              */
               width: 100%;
               margin-top: 1rem;
               background: $colorBluishGreen;
@@ -102,6 +115,11 @@ body {
               cursor: pointer;
               color: $colorWhite;
               letter-spacing: 0.08rem;
+              transition: 0.2s ease;
+              &:hover {
+                background: $colorDarkGray;
+                color: $colorBluishGreen;
+              }
             }
           }
         }
