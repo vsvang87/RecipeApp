@@ -1,0 +1,106 @@
+$colorBlack: #323643;
+$colorDarkGray: #606470;
+$colorBluishGreen: #1dad9b;
+$colorWhite: #f7f7f7;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: $colorDarkGray;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(90%, 90rem);
+  margin-inline: auto;
+  padding: 2rem 0;
+  .recipe-content {
+    .search-content {
+      text-align: center;
+      margin-bottom: 2rem;
+      h1 {
+        margin-bottom: 2rem;
+        color: $colorBluishGreen;
+      }
+      form {
+        width: 100%;
+
+        input {
+          position: relative;
+          display: inline-block;
+          outline: none;
+          padding: 0.5rem 0.5rem;
+          width: 80%;
+          border: 1px solid $colorDarkGray;
+          background: $colorWhite;
+          border-right: none;
+          border-radius: 5px 0 0 5px;
+          font-size: 1.5rem;
+        }
+        .search-btn {
+          position: absolute;
+          top: 6.35rem;
+          background: $colorWhite;
+          padding: 0.5rem;
+          border: none;
+          border-radius: 0 5px 5px 0;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+    .search-result-container {
+      display: grid;
+      /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      .result-recipe {
+        border: 1px solid $colorBlack;
+        background: $colorBlack;
+        img {
+          width: 100%;
+        }
+        .result-description {
+          position: relative;
+          padding: 1rem;
+          text-align: center;
+          min-height: 155px;
+          .title {
+            padding-bottom: 0.5rem;
+            color: $colorWhite;
+          }
+          .calories {
+            color: $colorWhite;
+          }
+          a {
+            text-decoration: none;
+            .btn {
+              position: absolute;
+              left: 1rem;
+              right: 1rem;
+              bottom: 1rem;
+              background: $colorBluishGreen;
+              padding: 0.5rem 1rem;
+              text-decoration: none;
+              border: none;
+              border-radius: 50px 50px;
+              font-size: 1rem;
+              cursor: pointer;
+              color: $colorWhite;
+            }
+          }
+        }
+      }
+    }
+  }
+}

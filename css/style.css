@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: #606470;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(90%, 90rem);
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+.container .recipe-content .search-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.container .recipe-content .search-content h1 {
+  margin-bottom: 2rem;
+  color: #1dad9b;
+}
+.container .recipe-content .search-content form {
+  width: 100%;
+}
+.container .recipe-content .search-content form input {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  padding: 0.5rem 0.5rem;
+  width: 80%;
+  border: 1px solid #606470;
+  background: #f7f7f7;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.5rem;
+}
+.container .recipe-content .search-content form .search-btn {
+  position: absolute;
+  top: 6.35rem;
+  background: #f7f7f7;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.container .recipe-content .search-result-container {
+  display: grid;
+  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.container .recipe-content .search-result-container .result-recipe {
+  border: 1px solid #323643;
+  background: #323643;
+}
+.container .recipe-content .search-result-container .result-recipe img {
+  width: 100%;
+}
+.container .recipe-content .search-result-container .result-recipe .result-description {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  min-height: 155px;
+}
+.container .recipe-content .search-result-container .result-recipe .result-description .title {
+  padding-bottom: 0.5rem;
+  color: #f7f7f7;
+}
+.container .recipe-content .search-result-container .result-recipe .result-description .calories {
+  color: #f7f7f7;
+}
+.container .recipe-content .search-result-container .result-recipe .result-description a {
+  text-decoration: none;
+}
+.container .recipe-content .search-result-container .result-recipe .result-description a .btn {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  background: #1dad9b;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #f7f7f7;
+}/*# sourceMappingURL=style.css.map */
