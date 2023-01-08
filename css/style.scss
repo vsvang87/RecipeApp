@@ -47,6 +47,7 @@ body {
         }
         h1 {
           color: $colorBluishGreen;
+          font-size: calc(2vw + 10px);
         }
       }
 
@@ -66,14 +67,17 @@ body {
           background: $colorWhite;
           border-right: none;
           border-radius: 5px 0 0 5px;
-          font-size: 1.5rem;
+          font-size: calc(1.5vw + 10px);
+          @include mediaQuery450() {
+            width: 100%;
+          }
         }
         .search-btn {
           background: $colorWhite;
           padding: 0.5rem;
           border: none;
           border-radius: 0 5px 5px 0;
-          font-size: 1.5rem;
+          font-size: calc(1.5vw + 10px);
           cursor: pointer;
           color: $colorBluishGreen;
         }
@@ -92,12 +96,14 @@ body {
         grid-template-columns: repeat(1, minmax(auto, 1fr));
       }
       .result-recipe {
-        border: 1px solid $colorBlack;
-        border-radius: 5px;
+        border: 2px solid $colorWhite;
+        border-radius: 10px;
         background: $colorBlack;
+        box-shadow: 0 5px 2px 0 rgba($color: #000000, $alpha: 0.3);
         img {
           width: 100%;
-          border-radius: 5px 5px 0 0;
+          border-radius: 10px 10px 0 0;
+          object-fit: contain;
         }
         .result-description {
           letter-spacing: 0.05rem;
@@ -151,7 +157,7 @@ footer {
     align-items: center;
     gap: 1rem;
     .title {
-      font-size: 1.5rem;
+      font-size: calc(2vw + 10px);
     }
     img {
       width: 10%;

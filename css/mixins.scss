@@ -8,3 +8,8 @@
     @content;
   }
 }
+@mixin mediaQuery450() {
+  @media (max-width: 450px) {
+    @content;
+  }
+}

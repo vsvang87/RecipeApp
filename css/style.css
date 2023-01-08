@@ -49,6 +49,7 @@ body {
 }
 .container .recipe-content .search-content .title-content h1 {
   color: #1dad9b;
+  font-size: calc(2vw + 10px);
 }
 .container .recipe-content .search-content form {
   display: flex;
@@ -67,14 +68,19 @@ body {
   background: #f7f7f7;
   border-right: none;
   border-radius: 5px 0 0 5px;
-  font-size: 1.5rem;
+  font-size: calc(1.5vw + 10px);
+}
+@media (max-width: 450px) {
+  .container .recipe-content .search-content form input {
+    width: 100%;
+  }
 }
 .container .recipe-content .search-content form .search-btn {
   background: #f7f7f7;
   padding: 0.5rem;
   border: none;
   border-radius: 0 5px 5px 0;
-  font-size: 1.5rem;
+  font-size: calc(1.5vw + 10px);
   cursor: pointer;
   color: #1dad9b;
 }
@@ -96,13 +102,16 @@ body {
   }
 }
 .container .recipe-content .search-result-container .result-recipe {
-  border: 1px solid #323643;
-  border-radius: 5px;
+  border: 2px solid #f7f7f7;
+  border-radius: 10px;
   background: #323643;
+  box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.3);
 }
 .container .recipe-content .search-result-container .result-recipe img {
   width: 100%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .container .recipe-content .search-result-container .result-recipe .result-description {
   letter-spacing: 0.05rem;
@@ -157,7 +166,7 @@ footer .footer-content {
   gap: 1rem;
 }
 footer .footer-content .title {
-  font-size: 1.5rem;
+  font-size: calc(2vw + 10px);
 }
 footer .footer-content img {
   width: 10%;
