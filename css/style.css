@@ -43,19 +43,19 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+  width: 100%;
 }
 .container .recipe-content .search-content .title-content img {
   width: 10%;
 }
 .container .recipe-content .search-content .title-content h1 {
   color: #1dad9b;
-  font-size: calc(2vw + 10px);
 }
 .container .recipe-content .search-content form {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   margin-inline: auto;
   text-align: center;
 }
@@ -63,12 +63,12 @@ body {
   display: inline-block;
   outline: none;
   padding: 0.5rem 0.5rem;
-  width: 80%;
+  width: 90%;
   border: 1px solid #606470;
   background: #f7f7f7;
   border-right: none;
   border-radius: 5px 0 0 5px;
-  font-size: calc(1.5vw + 10px);
+  font-size: 1.5rem;
 }
 @media (max-width: 450px) {
   .container .recipe-content .search-content form input {
@@ -80,7 +80,7 @@ body {
   padding: 0.5rem;
   border: none;
   border-radius: 0 5px 5px 0;
-  font-size: calc(1.5vw + 10px);
+  font-size: 1.5rem;
   cursor: pointer;
   color: #1dad9b;
 }
@@ -116,7 +116,6 @@ body {
 .container .recipe-content .search-result-container .result-recipe .result-description {
   letter-spacing: 0.05rem;
   padding: 1rem;
-  min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
 }
@@ -163,10 +162,11 @@ footer .footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   gap: 1rem;
 }
 footer .footer-content .title {
-  font-size: calc(2vw + 10px);
+  font-size: 1.5rem;
 }
 footer .footer-content img {
   width: 10%;
