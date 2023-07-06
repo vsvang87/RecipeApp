@@ -23,10 +23,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(90%, 90rem);
+  width: min(90%, 100rem);
   margin-inline: auto;
   padding: 2rem 0;
-  @include mediaQuery750() {
+  @include mediaQuery650() {
     width: min(100%, 90rem);
   }
   .recipe-content {
@@ -34,11 +34,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 1rem;
+    width: 100%;
     .search-content {
       margin-bottom: 2rem;
+      width: 100%;
       .title-content {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 1rem;
         padding: 1rem;
@@ -55,19 +58,19 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 300px;
         margin-inline: auto;
         text-align: center;
         input {
           display: inline-block;
           outline: none;
           padding: 0.5rem 0.5rem;
-          width: 90%;
+          width: 240px;
           border: 1px solid $colorDarkGray;
           background: $colorWhite;
           border-right: none;
-          border-radius: 5px 0 0 5px;
-          font-size: 1.5rem;
+          border-radius: 10px 0 0 10px;
+          font-size: 1rem;
           @include mediaQuery450() {
             width: 100%;
           }
@@ -76,8 +79,8 @@ body {
           background: $colorWhite;
           padding: 0.5rem;
           border: none;
-          border-radius: 0 5px 5px 0;
-          font-size: 1.5rem;
+          border-radius: 0 10px 10px 0;
+          font-size: 1rem;
           cursor: pointer;
           color: $colorBluishGreen;
         }
@@ -86,29 +89,35 @@ body {
     .search-result-container {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: repeat(4, minmax(auto, 1fr));
-      /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+      grid-template-columns: repeat(4, 1fr);
+      // grid-template-columns: repeat(auto, minmax(100, 1fr));
       gap: 1.5rem;
       @include mediaQuery1550() {
-        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-columns: repeat(3, 1fr);
       }
-      @include mediaQuery750() {
-        grid-template-columns: repeat(1, minmax(auto, 1fr));
+      @include mediaQuery1050 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mediaQuery650() {
+        grid-template-columns: repeat(1, 1fr);
       }
       .result-recipe {
-        border: 2px solid $colorWhite;
+        border: 1px solid $colorWhite;
         border-radius: 10px;
         background: $colorBlack;
         box-shadow: 0 5px 2px 0 rgba($color: #000000, $alpha: 0.3);
+        padding: 1rem;
         img {
           width: 100%;
-          border-radius: 10px 10px 0 0;
-          object-fit: contain;
+          height: 230px;
+          border-radius: 10px;
+          object-fit: cover;
         }
         .result-description {
           letter-spacing: 0.05rem;
           padding: 1rem;
-          min-height: fit-content;
+          // min-height: fit-content;
+          height: 140px;
           .title {
             padding-bottom: 0.5rem;
             color: $colorWhite;
@@ -127,7 +136,7 @@ body {
               padding: 0.5rem 1rem;
               text-decoration: none;
               border: none;
-              border-radius: 50px 50px;
+              border-radius: 10px;
               font-size: 1rem;
               cursor: pointer;
               color: $colorWhite;

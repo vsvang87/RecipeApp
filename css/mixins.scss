@@ -3,8 +3,13 @@
     @content;
   }
 }
-@mixin mediaQuery750() {
-  @media (max-width: 750px) {
+@mixin mediaQuery1050() {
+  @media (max-width: 1050px) {
+    @content;
+  }
+}
+@mixin mediaQuery650() {
+  @media (max-width: 650px) {
     @content;
   }
 }
