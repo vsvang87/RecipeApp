@@ -109,10 +109,9 @@ body {
   }
 }
 .container .recipe-content .search-result-container .result-recipe {
-  border: 1px solid #f7f7f7;
   border-radius: 10px;
   background: #323643;
-  box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px 10px rgba(0, 0, 0, 0.3);
   padding: 1rem;
 }
 .container .recipe-content .search-result-container .result-recipe img {

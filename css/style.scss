@@ -90,7 +90,6 @@ body {
       min-height: 100vh;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      // grid-template-columns: repeat(auto, minmax(100, 1fr));
       gap: 1.5rem;
       @include mediaQuery1550() {
         grid-template-columns: repeat(3, 1fr);
@@ -102,10 +101,10 @@ body {
         grid-template-columns: repeat(1, 1fr);
       }
       .result-recipe {
-        border: 1px solid $colorWhite;
+        // border: 1px solid $colorWhite;
         border-radius: 10px;
         background: $colorBlack;
-        box-shadow: 0 5px 2px 0 rgba($color: #000000, $alpha: 0.3);
+        box-shadow: 5px 5px 15px 10px rgba($color: #000000, $alpha: 0.3);
         padding: 1rem;
         img {
           width: 100%;
