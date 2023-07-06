@@ -41,7 +41,7 @@ body {
       width: 100%;
       .title-content {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
         padding: 1rem;
@@ -115,12 +115,12 @@ body {
         }
         .result-description {
           letter-spacing: 0.05rem;
-          padding: 1rem;
-          // min-height: fit-content;
-          height: 140px;
+          min-height: fit-content;
+          padding-top: 1rem;
           .title {
             padding-bottom: 0.5rem;
             color: $colorWhite;
+            font-size: 1rem;
           }
           .calories {
             color: $colorWhite;

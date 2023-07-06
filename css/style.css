@@ -42,7 +42,7 @@ body {
 }
 .container .recipe-content .search-content .title-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
@@ -124,12 +124,14 @@ body {
 }
 .container .recipe-content .search-result-container .result-recipe .result-description {
   letter-spacing: 0.05rem;
-  padding: 1rem;
-  height: 140px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding-top: 1rem;
 }
 .container .recipe-content .search-result-container .result-recipe .result-description .title {
   padding-bottom: 0.5rem;
   color: #f7f7f7;
+  font-size: 1rem;
 }
 .container .recipe-content .search-result-container .result-recipe .result-description .calories {
   color: #f7f7f7;
